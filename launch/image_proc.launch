@@ -9,12 +9,13 @@
   	<remap from="right/camera_info" to="/camera/right/camera_info"/>
   	<param name="min_disparity" value="1"/>
   	<param name="correlation_window_size" value="20"/>
+        <param name="queue_size" value="2000" />
+        <param name="approximate_sync" value="True" />
   </node>
 
-	<group ns="camera">
+	<!--<group ns="camera">
 		<node pkg="nodelet" type="nodelet" name="depth_nodelet_manager"  args="manager"/>
-		<!-- <node pkg="nodelet" type="nodelet" name="depth" args="load rtabmap_ros/disparity_to_depth depth_nodelet_manager"/> -->
-	</group>
-
+		<node pkg="nodelet" type="nodelet" name="depth" args="load rtabmap_ros/disparity_to_depth depth_nodelet_manager"/>
+	</group> -->
 
 </launch>
